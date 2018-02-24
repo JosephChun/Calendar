@@ -20,11 +20,20 @@ public class Calendar {
 		scanner.close();
 		*/
 		
-		System.out.println("달을 입력하세요.");
-		int month = scanner.nextInt();
-		int[] monthDay = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		while(true) {
+			System.out.println("달을 입력하세요.");
+			int month = scanner.nextInt();
+			
+			if(month==-1) {
+				System.out.println("Have a nice day!");
+				break;
+			}
+			int[] monthDay = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		
-		System.out.println(month + "월은 " + monthDay[(month-1)] + "일까지 있습니다");
+			System.out.println(month + "월은 " + monthDay[(month-1)] + "일까지 있습니다");
+			System.out.println();
+			
+		}
 		
 	}
 
